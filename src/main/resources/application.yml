@@ -1,2 +1,26 @@
 server:
-  port: 8089
+  port: 8088
+
+#mysql  connect
+spring:
+  datasource:
+    username: root
+    #&useSSL=false            --MySQL在高版本需要指明是否进行SSL连接
+    #&serverTimezone=GMT%2B8    --时区问题   UTC：指全球标准时间，也是mysql服务器使用的时间，
+    #                               而我们的北京时间比它早8个小时，即北京时间=UTC+8:00 所以serverTimezone=UTC还会造成时差问题
+    #autoReconnect=true      连接数据库超时设置
+    #failOverReadOnly=false  自动重连成功后，连接是否设置为只读？
+    url: jdbc:mysql://localhost:3306/gcl_test?autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#   dbcp2:                                          # 进行数据库连接池的配置
+#   min-idle: 5                                   # 数据库连接池的最小维持连接数
+#   initial-size: 5                               # 初始化提供的连接数
+#   max-total: 5                                  # 最大的连接数
+#   max-wait-millis: 200                          # 等待连接获取的最大超时时间
+aa:
+  cc: 11111
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+   # mapper-locations: classpath*:/mapper/*.xml
