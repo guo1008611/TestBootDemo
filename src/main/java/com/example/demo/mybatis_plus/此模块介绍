@@ -36,3 +36,18 @@
 
     【@Version】
      @Version             用于字段实现乐观锁
+
+Java  运行bat
+taskkill /f /pid 9523
+
+netstat -aon|findstr "8080"
+
+
+-- 运行 并挂起
+@echo off
+start javaw -jar G:\wxz\construction-electronic-license-1.0.1.jar
+exit
+
+
+-- 运行 并输出日志
+java -jar G:\wxz\construction-electronic-license-1.0.1.jar >log/log.log &
