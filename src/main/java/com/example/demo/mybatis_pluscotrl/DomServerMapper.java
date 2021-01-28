@@ -1,9 +1,8 @@
-package com.example.demo.mybatis_plus;
+package com.example.demo.mybatis_pluscotrl;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
@@ -14,4 +13,6 @@ public interface DomServerMapper extends BaseMapper<Dom> {
 
 
     List<Map> list();
+
+    List<Map> listtree();
 }

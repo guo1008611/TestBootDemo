@@ -1,4 +1,4 @@
-package com.example.demo.mybatis_plus;
+package com.example.demo.mybatis_pluscotrl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +28,16 @@ public class DomController {
 
     public static void main(String[] args) {
 
+    }
+
+    /**
+     *
+     * @return   map  树
+     */
+    @GetMapping("listtree")
+    public Map listtree(){
+        Map list= domService.listtree();
+        return list;
     }
 
 }
